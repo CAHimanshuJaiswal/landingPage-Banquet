@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="We'd love to send you a quote! Please fill out this form. 🌻" />
+  <title>Banquet Quote (Hotel Plaza)</title>
+  <link rel="icon" type="image/png" href="https://n8n.io/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <section>
+      <form class="card" id="n8n-form" name="n8n-form" action="#" method="POST" novalidate>
+        <div class="form-header">
+          <h1>Banquet Quote (Hotel Plaza)</h1>
+          <p style="white-space: pre-line">We'd love to send you a quote! Please fill out this form. 🌻 </p>
+        </div>
+
+        <div class="inputs-wrapper">
+          <div class="form-group">
+            <label class="form-label form-required" for="event_date">Event Date</label>
+            <input class="form-input form-required" type="date" id="event_date" name="event_date" required />
+            <p class="error-event_date error-hidden">This field is required</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-required" for="phone_number">Phone Number</label>
+            <input class="form-input form-required" type="text" id="phone_number" name="phone_number" inputmode="tel" autocomplete="tel" required />
+            <p class="error-phone_number error-hidden">This field is required</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" type="text" id="name" name="name" autocomplete="name" />
+          </div>
+        </div>
+
+        <button id="submit-btn" type="submit">Submit</button>
+        <p id="form-error" class="error-show">Something went wrong. Please try again.</p>
+      </form>
+
+      <div class="card" id="submitted-form" style="display: none;">
+        <div class="form-header">
+          <h1>Form Submitted</h1>
+          <p>Your response has been recorded</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
